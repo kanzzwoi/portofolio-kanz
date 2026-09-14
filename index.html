@@ -1,111 +1,209 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio Saya</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Muhammad Furqon</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-slate-950 text-slate-100 font-['Poppins'] antialiased min-h-screen selection:bg-indigo-500 selection:text-white">
+<body class="bg-leaves-container min-h-[100dvh] w-full flex items-center justify-center p-3 sm:p-5 overflow-hidden relative">
 
-  <div class="fixed top-0 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl -z-10 pointer-events-none animate-pulse"></div>
-  <div class="fixed bottom-10 right-10 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl -z-10 pointer-events-none animate-pulse"></div>
+    <div id="wa-notif-container" class="fixed top-3 left-1/2 -translate-x-1/2 w-[92%] max-w-[350px] z-50 flex flex-col gap-2 pointer-events-none"></div>
 
-  <nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-slate-900/60 border-b border-slate-800">
-    <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#" class="text-xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent" id="nav-brand">Profile</a>
-      <div class="hidden md:flex gap-6 text-sm font-medium text-slate-300">
-        <a href="#about" class="hover:text-indigo-400 transition">Tentang</a>
-        <a href="#funfact" class="hover:text-indigo-400 transition">Fun Fact</a>
-        <a href="#favorites" class="hover:text-indigo-400 transition">Favorit</a>
-        <a href="#contact" class="hover:text-indigo-400 transition">Kontak</a>
-      </div>
-    </div>
-  </nav>
+    <main class="w-[92vw] max-w-[360px] h-[85dvh] max-h-[630px] min-h-[500px] glass-card rounded-[38px] flex flex-col justify-between overflow-hidden relative shadow-2xl p-4 sm:p-5 border-2 border-white/60 my-auto">
 
-  <section class="pt-32 pb-20 px-6 max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
-    <div class="relative group">
-      <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full blur opacity-70 group-hover:opacity-100 transition duration-500"></div>
-      <img id="profile-img" src="" alt="Profile" class="relative w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-2 border-slate-700">
-    </div>
-    
-    <div class="flex-1 text-center md:text-left">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-semibold mb-4">
-        <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> <span id="user-asal"></span>
-      </div>
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-2" id="user-nama">Loading...</h1>
-      <p class="text-lg text-indigo-400 font-medium mb-4" id="user-peran"></p>
-      <p class="text-slate-400 leading-relaxed mb-6 max-w-xl" id="user-bio"></p>
-      
-      <div class="flex flex-wrap justify-center md:justify-start gap-4" id="hero-cta">
-        <a id="btn-wa" target="_blank" class="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-medium flex items-center gap-2 shadow-lg shadow-emerald-500/20 transition transform hover:-translate-y-0.5">
-          <i data-lucide="message-circle" class="w-5 h-5"></i> Chat WhatsApp
-        </a>
-        <a href="#contact" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium border border-slate-700 transition">
-          Hubungi Saya
-        </a>
-      </div>
-    </div>
-  </section>
+        <div class="flex-1 overflow-y-auto pr-1 flex flex-col relative">
 
-  <section id="funfact" class="py-16 px-6 max-w-5xl mx-auto">
-    <h2 class="text-2xl font-bold text-center mb-2 flex items-center justify-center gap-2">
-      <i data-lucide="sparkles" class="text-amber-400"></i> Fun Facts Tentang Saya
-    </h2>
-    <p class="text-slate-400 text-center mb-8 text-sm">Hal-hal unik yang perlu kamu ketahui</p>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="funfact-list"></div>
-  </section>
+            <header id="profile-header" class="profile-header header-home">
+                <div class="avatar-box">
+                    <img src="https://k.top4top.io/p_39092c3061.jpg" 
+                         alt="Muhammad Furqon" 
+                         class="avatar-img"
+                         onerror="this.src='https://placehold.co/400x400/2d3748/ffffff?text=Furqon'">
+                </div>
+                <div class="profile-text">
+                    <h1 class="profile-name">MUHAMMAD FURQON</h1>
+                    <p class="profile-sub">
+                        GAMER &amp; PHOTOGRAPHY ENTHUSIAST.<br>ALSO LOVE WATCHING ANIME
+                    </p>
+                </div>
+            </header>
 
-  <section id="favorites" class="py-16 px-6 max-w-5xl mx-auto">
-    <h2 class="text-2xl font-bold text-center mb-2 flex items-center justify-center gap-2">
-      <i data-lucide="heart" class="text-rose-400"></i> Hobi & Hal Favorit
-    </h2>
-    <p class="text-slate-400 text-center mb-10 text-sm">Aktivitas dan makanan yang bikin bahagia</p>
+            <section id="tab-home" class="tab-content active flex-col items-center text-center flex-1 justify-between">
+                <div class="w-full glass-inner-box rounded-2xl p-4 my-auto relative shadow-sm text-left border border-white/70">
+                    <div class="absolute -top-3 left-3 bg-black text-white w-7 h-7 rounded-full flex items-center justify-center text-xs shadow-md">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    
+                    <p class="text-xs text-gray-800 leading-relaxed text-center font-medium pt-1 px-1">
+                        “Berjalanlah, karena dalam perjalanan terdapat lima manfaat: menghilangkan kesedihan, mencari penghidupan, memperoleh ilmu, mendapatkan adab, dan bertemu orang-orang mulia.”
+                    </p>
+                    <p class="text-[9px] text-gray-600 text-center mt-2 italic font-mono">
+                        imam al-syafii [kitab: al-dawin]
+                    </p>
 
-    <h3 class="text-lg font-semibold mb-4 text-indigo-300 flex items-center gap-2">
-      <i data-lucide="compass" class="w-5 h-5"></i> Hobi Utama
-    </h3>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-12" id="hobi-list"></div>
+                    <div class="absolute -bottom-3 right-3 bg-black text-white w-7 h-7 rounded-full flex items-center justify-center text-xs shadow-md">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </div>
+                </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div>
-        <h3 class="text-lg font-semibold mb-4 text-indigo-300 flex items-center gap-2">
-          <i data-lucide="utensils" class="w-5 h-5"></i> Makanan Favorit
-        </h3>
-        <div class="space-y-3" id="makanan-list"></div>
-      </div>
+                <p class="text-[11px] text-gray-700 font-medium tracking-wide pb-1 pt-3">
+                    Come find out more about me
+                </p>
+            </section>
 
-      <div>
-        <h3 class="text-lg font-semibold mb-4 text-indigo-300 flex items-center gap-2">
-          <i data-lucide="gamepad-2" class="w-5 h-5"></i> Game Favorit
-        </h3>
-        <div class="space-y-3" id="game-list"></div>
-      </div>
-    </div>
-  </section>
+            <section id="tab-about" class="tab-content flex-col text-left">
+                <div class="space-y-1.5 text-[11px] font-semibold text-gray-800 uppercase mb-4 tracking-wide pl-0.5">
+                    <div class="flex items-start"><span class="w-[82px] shrink-0 font-extrabold">• NAMA</span><span class="mr-1.5">:</span><span>MUHAMMAD FURQON</span></div>
+                    <div class="flex items-start"><span class="w-[82px] shrink-0 font-extrabold">• ASAL</span><span class="mr-1.5">:</span><span>KALIMANTAN SELATAN</span></div>
+                    <div class="flex items-start"><span class="w-[82px] shrink-0 font-extrabold">• LAHIR</span><span class="mr-1.5">:</span><span>27 AGUSTUS</span></div>
+                    <div class="flex items-start"><span class="w-[82px] shrink-0 font-extrabold">• HOBI</span><span class="mr-1.5">:</span><span class="flex-1">PHOTOGRAPHY, GAME & NONTON ANIME</span></div>
+                    <div class="flex items-start"><span class="w-[82px] shrink-0 font-extrabold">• FAV PET</span><span class="mr-1.5">:</span><span>KUCING</span></div>
+                    <div class="flex items-start"><span class="w-[82px] shrink-0 font-extrabold">• FAV FOOD</span><span class="mr-1.5">:</span><span>MARTABAK & NASGOR</span></div>
+                </div>
 
-  <section id="contact" class="py-16 px-6 max-w-5xl mx-auto text-center">
-    <div class="p-8 rounded-3xl bg-slate-900/80 border border-slate-800 shadow-2xl relative overflow-hidden">
-      <div class="absolute -top-10 -right-10 w-40 h-40 bg-indigo-500/10 rounded-full blur-2xl"></div>
-      
-      <h2 class="text-3xl font-bold mb-3">Mari Terhubung!</h2>
-      <p class="text-slate-400 mb-8 max-w-md mx-auto text-sm">Punya pertanyaan, ide kolaborasi, atau mau mabar game? Silakan kontak melalui platform berikut.</p>
-      
-      <div class="flex flex-wrap justify-center gap-4" id="social-links"></div>
-    </div>
-  </section>
+                <div class="mb-3">
+                    <h3 class="text-[11px] font-black text-gray-900 uppercase tracking-wider mb-1">
+                        FUNFACT ABOUT ME:
+                    </h3>
+                    <p class="text-[10px] leading-relaxed text-gray-800 font-normal bg-white/35 backdrop-blur-md p-2.5 rounded-xl border border-white/60">
+                        saya memiliki pengalaman yang menyenangkan yaitu membuat 'bot whatsapp'. semenjak saya membuat bot whatsApp, saya tidak merasa kesepian lagi karna memiliki member aktif yg selalu ngajok ngobrol atau bermain. komunitas yg saya bangun juga awalnya terbilang cukup ramai walau memang sedikit susah diatur, tapi ini adalah pengalaman terbaik saya. skrg 2026 saya sudah berhenti mengoperasikan bot hatsapp karna ingin fokus di lain.
+                    </p>
+                </div>
 
-  <footer class="py-8 text-center text-xs text-slate-500 border-t border-slate-800">
-    <p>© <span id="year"></span> <span id="footer-nama"></span>. Supported for Netlify.</p>
-  </footer>
+                <div class="mb-1">
+                    <h3 class="text-[11px] font-black text-gray-900 uppercase tracking-wider mb-1">
+                        PESAN UNTUK DIRI SENDIIR:
+                    </h3>
+                    <p class="text-[10px] leading-relaxed text-gray-800 font-normal bg-white/35 backdrop-blur-md p-2.5 rounded-xl border border-white/60">
+                        jika nanti diriku di masa depan membaca ini, aku harap kamu sudah sukses dengan apa yg kamu inginkan. semoga kelak kamu mempunyai keluarga yg harmonis bersama istrimu dan ttip salam ke dia dari dirimu di tahun 2026
+                    </p>
+                </div>
+            </section>
 
-  <script src="config.js"></script>
-  <script src="script.js"></script>
+            <section id="tab-love" class="tab-content flex-col text-left">
+                <h2 class="text-center font-black text-base text-gray-900 tracking-widest uppercase mb-4">
+                    MY KISAH
+                </h2>
+
+                <div class="grid grid-cols-2 gap-3 px-1">
+                    <div class="flex flex-col items-center">
+                        <div class="w-full aspect-square bg-black rounded-2xl flex items-center justify-center shadow-md border-2 border-gray-900 p-2 text-center transition-transform hover:scale-105 duration-300">
+                            <span class="text-white font-black text-xs sm:text-sm tracking-widest leading-snug">
+                                COMING<br>SOON
+                            </span>
+                        </div>
+                        <span class="text-[9px] font-extrabold text-gray-900 uppercase tracking-wider mt-1.5">
+                            FUTURE WIFE
+                        </span>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <div class="w-full aspect-square rounded-2xl overflow-hidden shadow-md border-2 border-white/80 transition-transform hover:scale-105 duration-300 bg-pink-100">
+                            <img src="https://l.top4top.io/p_3909r6a3v1.jpg" 
+                                 alt="Ruka Sarashina" 
+                                 class="w-full h-full object-cover"
+                                 onerror="this.src='https://placehold.co/300x300/fbcfe8/831843?text=Ruka+Sarashina'">
+                        </div>
+                        <span class="text-[9px] font-extrabold text-gray-900 uppercase tracking-wider mt-1.5">
+                            RUKA SARASHINA
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tab-contact" class="tab-content flex-col text-left">
+                <div class="space-y-1 text-[11px] font-semibold text-gray-800 uppercase mb-4 tracking-wide pl-0.5">
+                    <p><span class="inline-block w-20 font-extrabold">• EMAIL</span>: <a href="mailto:kanzbrok@gmail.com" class="hover:underline text-gray-900 lowercase font-medium">kanzbrok@gmail.com</a></p>
+                    <p><span class="inline-block w-20 font-extrabold">• NUMBER</span>: +1 (289) 430 9810</p>
+                    <p><span class="inline-block w-20 font-extrabold">• NUMBER2</span>: +62 831-0426-8179</p>
+                </div>
+
+                <div class="space-y-2.5 mb-4 pl-0.5">
+                    <a href="https://instagram.com/kanzgt" target="_blank" rel="noopener noreferrer" 
+                       class="flex items-center gap-2.5 text-gray-900 font-extrabold text-[11px] tracking-wider hover:opacity-75 transition-opacity">
+                        <i class="fa-brands fa-instagram text-xl w-6 text-center"></i>
+                        <span>INSTAGRAM: @kanzgt</span>
+                    </a>
+
+                    <!-- TikTok -->
+                    <a href="https://tiktok.com/@kanzzbr.h" target="_blank" rel="noopener noreferrer" 
+                       class="flex items-center gap-2.5 text-gray-900 font-extrabold text-[11px] tracking-wider hover:opacity-75 transition-opacity">
+                        <i class="fa-brands fa-tiktok text-lg w-6 text-center"></i>
+                        <span>TIKTOK: @kanzzbruh</span>
+                    </a>
+
+                    <a href="https://wa.me/12894309810" target="_blank" rel="noopener noreferrer" 
+                       class="flex items-center gap-2.5 text-gray-900 font-extrabold text-[11px] tracking-wider hover:opacity-75 transition-opacity">
+                        <i class="fa-brands fa-whatsapp text-xl w-6 text-center"></i>
+                        <span>WHATSAPP: +1 (289) 430 9810</span>
+                    </a>
+                    
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
+                       class="flex items-center gap-2.5 text-gray-900 font-extrabold text-[11px] tracking-wider hover:opacity-75 transition-opacity">
+                        <i class="fa-brands fa-github text-xl w-6 text-center"></i>
+                        <span>GITHUB: kanzzet</span>
+                    </a>
+                </div>
+                
+                <div class="bg-white/35 backdrop-blur-md p-3 rounded-xl border border-white/60">
+                    <p class="text-[9.5px] font-bold text-gray-800 leading-normal uppercase tracking-wide">
+                        SILAHKAN CHAT JIKA ANDA MEMERLUKAN SESUATU DARI SAYA.<br>
+                        SAYA AKAN MEMBANTU SEBISA MUNGKIN JIKA MEMANG DIPERLUKAN. JADI, JANGAN RAGU-RAGU UNTUK MENGHUBUNGI SAYA
+                    </p>
+                </div>
+            </section>
+
+        </div>
+
+        <nav class="w-full pt-2">
+            <div class="w-full bg-white/40 backdrop-blur-md rounded-full border-2 border-slate-900 py-1.5 px-2 flex items-center justify-around shadow-lg">
+                
+                <button onclick="switchTab('home')" id="btn-home" class="nav-btn active flex flex-col items-center group cursor-pointer focus:outline-none">
+                    <div class="icon-circle w-9 h-9 rounded-full border-2 border-slate-900 flex items-center justify-center transition-all duration-300">
+                        <i class="fa-solid fa-house text-xs"></i>
+                    </div>
+                    <span class="text-[9px] font-black uppercase text-gray-900 tracking-wider mt-0.5">HOME</span>
+                    <div class="indicator-line mt-0.5 rounded-full"></div>
+                </button>
+                
+                <button onclick="switchTab('about')" id="btn-about" class="nav-btn flex flex-col items-center group cursor-pointer focus:outline-none">
+                    <div class="icon-circle w-9 h-9 rounded-full border-2 border-slate-900 flex items-center justify-center transition-all duration-300">
+                        <i class="fa-solid fa-user text-xs"></i>
+                    </div>
+                    <span class="text-[9px] font-black uppercase text-gray-900 tracking-wider mt-0.5">ABOUT</span>
+                    <div class="indicator-line mt-0.5 rounded-full"></div>
+                </button>
+                
+                <button onclick="switchTab('love')" id="btn-love" class="nav-btn flex flex-col items-center group cursor-pointer focus:outline-none">
+                    <div class="icon-circle w-9 h-9 rounded-full border-2 border-slate-900 flex items-center justify-center transition-all duration-300">
+                        <i class="fa-solid fa-heart text-xs"></i>
+                    </div>
+                    <span class="text-[9px] font-black uppercase text-gray-900 tracking-wider mt-0.5">LOVE</span>
+                    <div class="indicator-line mt-0.5 rounded-full"></div>
+                </button>
+                
+                <button onclick="switchTab('contact')" id="btn-contact" class="nav-btn flex flex-col items-center group cursor-pointer focus:outline-none">
+                    <div class="icon-circle w-9 h-9 rounded-full border-2 border-slate-900 flex items-center justify-center transition-all duration-300">
+                        <i class="fa-solid fa-phone text-xs"></i>
+                    </div>
+                    <span class="text-[9px] font-black uppercase text-gray-900 tracking-wider mt-0.5">CONTACT</span>
+                    <div class="indicator-line mt-0.5 rounded-full"></div>
+                </button>
+
+            </div>
+        </nav>
+
+    </main>
+
+    <script src="js/tabs.js"></script>
+    <script src="js/notification.js"></script>
 </body>
 </html>
