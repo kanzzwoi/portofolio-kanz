@@ -25,8 +25,8 @@ portfolio-furqon/
 ├── css/
 │   └── style.css           # Custom CSS, efek glassmorphism, & animasi header
 └── js/
-    ├── tabs.js             # Logika perpindahan tab & animasi morphing header
-    └── notification.js     # Logika notifikasi WhatsApp, kontrol audio, & gesture swipe
+    ├── tabs.js             # Buat perpindahan tab & animasi morphing header
+    └── notification.js     # Buat notifikasi WhatsApp, kontrol audio, & gesture swipe
 ```
 
 ---
