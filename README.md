@@ -2,7 +2,7 @@
 
 Website portofolio pribadi yang interaktif, elegan, dan responsif. Dibangun menggunakan HTML5, Tailwind CSS, dan Vanilla JavaScript dengan gaya visual glassmorphic modern serta simulasi notifikasi pesan interaktif.
 
-PREVIEW: [portofolio-kanz.com](https://portofolio-kanz.netlify.app)
+PREVIEW: [portofolio-kanz.netlify.app](https://portofolio-kanz.netlify.app)
 
 ---
 
