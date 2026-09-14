@@ -2,6 +2,8 @@
 
 Website portofolio pribadi yang interaktif, elegan, dan responsif. Dibangun menggunakan HTML5, Tailwind CSS, dan Vanilla JavaScript dengan gaya visual glassmorphic modern serta simulasi notifikasi pesan interaktif.
 
+PREVIEW: portofolio-kanz.netlify.app
+
 ---
 
 ## ✨ Fitur Utama
@@ -70,7 +72,7 @@ Proyek ini adalah *static website* (HTML/CSS/JS murni), sehingga sangat mudah da
 
 1. Clone atau unduh repository ini ke komputer/HP kamu:
    ```bash
-   git clone https://github.com/kanzzwoi/portfolio-kanzz.git
+   git clone https://github.com/kanzzwoi/portfolio-kanz.git
    ```
 2. Masuk ke direktori proyek:
    ```bash
